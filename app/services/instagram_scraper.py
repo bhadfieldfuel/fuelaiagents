@@ -74,12 +74,13 @@ def fetch_instagram_posts(handle: str, limit: int = 20) -> List[Dict[str, Any]]:
         f"?token={token}"
     )
 
+    # Use directUrls instead of usernames - this works more reliably with Apify
+    profile_url = f"https://www.instagram.com/{username}/"
+    
     payload: Dict[str, Any] = {
-        "usernames": [username],
+        "directUrls": [profile_url],
         "resultsLimit": limit,
-        "includeStories": False,
-        "searchType": "user",
-        "addParentData": True,
+        "addParentData": False,  # Keep response simpler
     }
 
     session_cookie = _get_ig_session_cookie()
@@ -89,7 +90,8 @@ def fetch_instagram_posts(handle: str, limit: int = 20) -> List[Dict[str, Any]]:
         payload["sessionCookie"] = session_cookie
 
     print(f"[instagram_scraper] Fetching IG posts for @{username} (limit={limit})")
-    resp = httpx.post(url, json=payload, timeout=60)
+    print(f"[instagram_scraper] Using profile URL: {profile_url}")
+    resp = httpx.post(url, json=payload, timeout=120)  # Increased timeout to 120s
     print("[instagram_scraper] HTTP status:", resp.status_code)
 
     # Apify commonly returns 201 = "run created + dataset items ready"

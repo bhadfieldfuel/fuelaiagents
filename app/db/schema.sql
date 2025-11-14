@@ -33,7 +33,8 @@ create table if not exists posts_raw (
   media_urls text[],
   posted_at timestamptz,
   engagement jsonb,
-  created_at timestamptz default now()
+  created_at timestamptz default now(),
+  unique(source_id, platform, post_id)
 );
 
 -- embeddings over posts_raw
