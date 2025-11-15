@@ -109,14 +109,16 @@ def get_suggestions(max_suggestions: int = 15) -> Dict[str, List[Dict[str, Any]]
     existing_handles = _get_existing_handles_for_brand(brand_id)
 
     brand_description = (
-        "AI that runs outbound and follow-ups for sales teams, acting like a human SDR "
-        "that never gets tired. It plugs into existing workflows and keeps reps in more "
-        "conversations instead of admin hell."
+        "FuelAI is an AI-powered platform that automates lead engagement, appointment scheduling, "
+        "and sales follow-ups across multiple channels (email, text, voicemail, live chat, Facebook Messenger). "
+        "It enables businesses to scale their sales efforts without increasing team workload, delivering authentic "
+        "human-like communication 24/7 that mirrors your brand's tone and voice."
     )
 
     target_audience = (
-        "B2B SaaS founders, sales leaders, SDR/BDR managers, and RevOps leaders who care "
-        "about pipeline, outbound efficiency, and scaling without just hiring more headcount."
+        "B2B SaaS founders, sales leaders, SDR/BDR managers, RevOps leaders, and founder-led sales teams "
+        "who want to respond faster, follow up smarter, and book more meetings without additional hires. "
+        "Teams focused on pipeline generation, outbound efficiency, and scaling sales without just hiring more headcount."
     )
 
     suggestions = suggest_accounts_for_brand(

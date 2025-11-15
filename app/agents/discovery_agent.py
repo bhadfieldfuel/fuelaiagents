@@ -53,8 +53,8 @@ def suggest_accounts_for_brand(
     their target audience follows.
 
     Brand:
-    - Product: FuelAI, an AI that runs outbound and follow-ups for sales teams, acting like a human SDR that never gets tired.
-    - Target buyers: sales leaders, SDR/BDR managers, RevOps, and founder-led sales teams in B2B SaaS.
+    - Product: FuelAI, an AI-powered platform that automates lead engagement, appointment scheduling, and sales follow-ups across multiple channels (email, text, voicemail, live chat, Facebook Messenger). It enables businesses to scale their sales efforts without increasing team workload, delivering authentic human-like communication 24/7 that mirrors your brand's tone and voice.
+    - Target buyers: sales leaders, SDR/BDR managers, RevOps, and founder-led sales teams in B2B SaaS who want to respond faster, follow up smarter, and book more meetings without additional hires.
 
     Your job:
     - Propose social media accounts on Instagram, Facebook, and LinkedIn
